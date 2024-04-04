@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: comp_industries
+
+  - name: merged_data

@@ -9,21 +9,23 @@ sources:
         - name: companies
         - name: job_postings
 
-# models:
-#     - name: my_first_dbt_model
-#       description: "A starter dbt model"
-#       columns:
-#           - name: id
-#             description: "The primary key for this table"
-#             tests:
-#                 - unique
-#                 - not_null
+models:
+    - name: stg_companies     
+      columns:
+          - name: company_id
+          - name: name
+          - name: state
+          - name: country
+          - name: city
+         
 
-#     - name: my_second_dbt_model
-#       description: "A starter dbt model"
-#       columns:
-#           - name: id
-#             description: "The primary key for this table"
-#             tests:
-#                 - unique
-#                 - not_null
+    - name: stg_job_postings  
+      columns:
+          - name: company_id
+          - name: title
+          - name: med_salary
+          - name: formatted_work_type
+          - name: location
+          - name: sponsored
+          - name: formatted_experience_level
+
