@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+    - name: staging
+      database: de-zoom-final-project
+      schema: linkedin_posts_data
+
+      tables:
+        - name: companies
+        - name: job_postings
+
+models:
+    - name: stg_companies     
+      columns:
+          - name: company_id
+          - name: name
+          - name: state
+          - name: country
+          - name: city
+         
+
+    - name: stg_job_postings  
+      columns:
+          - name: company_id
+          - name: title
+          - name: med_salary
+          - name: formatted_work_type
+          - name: location
+          - name: sponsored
+          - name: formatted_experience_level
+
